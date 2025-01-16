@@ -22,9 +22,11 @@ const Records = () => {
     const [priceRanges, setPriceRanges] = useState([]);
     const [priceCounts, setPriceCounts] = useState([]);
 
+    const apiUrl = process.env.REACT_APP_API_URL;
+
     // Fetch all records
     const getRecord = async () => {
-        const res = await axios.get('http://localhost:5000/api/products');
+        const res = await axios.get('${apiUrl}/products');
         const store = res.data;
         setRecord(store);
         setFilteredRecords(store);  // Initially display all records
