@@ -26,7 +26,7 @@ const Records = () => {
 
     // Fetch all records
     const getRecord = async () => {
-        const res = await axios.get('${apiUrl}/products');
+        const res = await axios.get(`${apiUrl}/products`);
         const store = res.data;
         setRecord(store);
         setFilteredRecords(store);  // Initially display all records
