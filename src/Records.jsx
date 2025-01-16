@@ -22,15 +22,15 @@ const Records = () => {
     const [priceRanges, setPriceRanges] = useState([]);
     const [priceCounts, setPriceCounts] = useState([]);
 
-    const apiUrl = process.env.REACT_APP_API_URL;
+    const apiUrl = process.env.REACT_APP_API_URL || 'https://your-project-name.vercel.app';
 
     // Fetch all records
     const getRecord = async () => {
-        const res = await axios.get(`${apiUrl}/products`);
+        const res = await axios.get(`${apiUrl}/api/products`);
         const store = res.data;
         setRecord(store);
         setFilteredRecords(store);  // Initially display all records
-    };   
+    };
 
     // Pagination Logic
     const [currentPage, setCurrentPage] = useState(1);
@@ -140,8 +140,8 @@ const Records = () => {
     return (
         <>
             <div className="container-logo">
-                <img src={logo} alt="My Image" 
-                  style={{width:'20%',display:'block',margin:'auto'}}
+                <img src={logo} alt="My Image"
+                    style={{ width: '20%', display: 'block', margin: 'auto' }}
                 />
             </div>
             {/* Month Selection Dropdown */}

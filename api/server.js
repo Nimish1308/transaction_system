@@ -14,6 +14,7 @@ app.get('/api/products', async (req, res) => {
     try {
         const response = await axios.get('https://s3.amazonaws.com/roxiler.com/product_transaction.json');
         res.json(response.data);
+        res.setHeader("Access-Control-Allow-Origin", "*");
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch data from Server' });
     }
