@@ -1,4 +1,6 @@
-Project Link: https://transaction-system-frontend.vercel.app/
+Project Preview:
+
+Link: https://transaction-system-frontend.vercel.app/
 
 Manual Installation Steps: 
 
