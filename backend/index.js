@@ -13,6 +13,11 @@ app.use(cors({
     credentials: true
 }));
 
+// Root route - optional
+app.get('/', (req, res) => {
+    res.send('Welcome to the Backend API');
+});
+
 // API route to fetch products
 app.get('/backend/products', async (req, res) => {
     try {
