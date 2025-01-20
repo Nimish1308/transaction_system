@@ -26,7 +26,7 @@ const Records = () => {
 
     // Fetch all records
     const getRecord = async () => {
-        const res = await axios.get(`http://localhost:5000/backend/products`,{ withCredentials: true }  );
+        const res = await axios.get(`https://transaction-system-api-two.vercel.app/backend/products`,{ withCredentials: true }  );
         const store = res.data;
         setRecord(store);
         setFilteredRecords(store);  // Initially display all records
