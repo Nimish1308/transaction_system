@@ -1,6 +1,7 @@
 Project Link: https://transaction-system-frontend.vercel.app/
 
-Manual Installation Steps:
+Manual Installation Steps: 
+
 Step 1: Clone git project
 cmd: git clone project_url 
 ![Screenshot (36)](https://github.com/user-attachments/assets/90b2dc19-72e7-44d6-bb68-e4686b82961c)
