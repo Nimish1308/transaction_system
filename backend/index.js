@@ -9,7 +9,7 @@ const app = express();
 // Middleware setup
 app.use(express.json());
 app.use(cors({
-    origin: 'https://emp-sys-frontend.vercel.app', // Frontend URL for CORS
+    origin: 'https://transaction-system-frontend.vercel.app', // Frontend URL for CORS
     credentials: true
 }));
 
